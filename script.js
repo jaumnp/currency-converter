@@ -19,10 +19,10 @@ const formatCurrencyBRL = (value) => {
 const convertCurrency = (amount, currency, symbol) => {
     try {
 
-        const total = formatCurrencyBRL(amount * currency).replace('R$', '');
-        
+        const total = formatCurrencyBRL(amount * currency);
+
         description.textContent = `${symbol}1 = ${formatCurrencyBRL(currency)}`;
-        result.textContent = `${total} reais`;
+        result.textContent = `Total de ${total}`;
 
         footer.classList.add('show-result');
     } catch(e) {
